@@ -92,15 +92,17 @@ class _NewTransactionState extends State<NewTransaction> {
           child: RaisedButton(
             color: Theme.of(context).primaryColor,
             onPressed: () {
-              print(userInput.text);
-              print(userInput2.text);
-              if (userInput.text.isEmpty ||
+              // print(userInput.text);
+              // print(userInput2.text);
+              if(userInput.text.isEmpty ||
                   double.parse(userInput2.text) <= 0 ||
                   dateTimee == DateTime(2018)) {
                 return;
               }
               widget.abc(
                   userInput.text, double.parse(userInput2.text), dateTimee);
+              Navigator.of(context).pop();
+
             },
             child: Container(
               child: Text(

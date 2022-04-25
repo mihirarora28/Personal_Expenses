@@ -11,9 +11,10 @@ class TransactionList extends StatelessWidget {
   Widget build(BuildContext context) {
     return tansactions.isEmpty
         ? Column(children: [
+          SizedBox(height: 10.0,),
             Text(
-              "NO TRANSACTIONS ADDED YET",
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
+              "NO TRANSACTIONS ADDED YET !",
+              style: TextStyle(color: Theme.of(context).primaryColor, fontSize: 20.0,fontStyle: FontStyle.italic),
             ),
             SizedBox(height: 20.0),
             Container(
@@ -37,13 +38,13 @@ class TransactionList extends StatelessWidget {
                         child: Text(
                           '₹' + tx.amount.toStringAsFixed(2),
                           style: TextStyle(
-                              color: Colors.purple,
+                              color: Theme.of(context).primaryColor,
                               fontWeight: FontWeight.bold,
                               fontSize: 20.0),
                         ),
                         decoration: BoxDecoration(
                             border:
-                                Border.all(width: 2.0, color: Colors.purple)),
+                                Border.all(width: 2.0, color: Theme.of(context).primaryColor)),
                         margin: EdgeInsets.symmetric(
                             horizontal: 10.0, vertical: 15.0),
                         padding: EdgeInsets.all(10.0),
@@ -57,7 +58,7 @@ class TransactionList extends StatelessWidget {
                                 fontWeight: FontWeight.bold, fontSize: 16.0),
                           ),
                           Text(
-                            DateFormat.yMMMd().format(DateTime.now()),
+                            DateFormat.yMMMd().format(tx.date),
                             style: TextStyle(color: Colors.grey),
                           )
                         ],

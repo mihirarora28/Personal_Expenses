@@ -16,7 +16,7 @@ class MyHomeState extends State<MyHome> {
 
   void _newTransaction(String title, double value, DateTime dat) {
     final txt = Transaction(
-        title: title, amount: value, date: dat, id: DateTime.now().toString());
+        title: title, amount: value, date: dat, id: dat.toString());
     setState(() {
       tansactions.add(txt);
     });

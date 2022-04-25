@@ -40,7 +40,7 @@ class myChart extends StatelessWidget {
         ),
       ),
         SizedBox(height: 10.0,),
-        Text('Total Amount = ₹' + allSum.toStringAsFixed(2),style: TextStyle(color: Colors.purple,fontSize: 20.0,fontWeight: FontWeight.bold),),
+        Text('Total Amount:  ₹' + allSum.toStringAsFixed(2),style: TextStyle(color: Theme.of(context).primaryColor,fontSize: 25.0,fontWeight: FontWeight.bold),),
     ]
     );
   }
